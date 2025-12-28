@@ -34,6 +34,11 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
 .actions-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -55,6 +60,21 @@ header h1 {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+.action-card h3 {
+    color: #1e3c72;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-card p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
 .cta-button {
     display: inline-block;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -63,15 +83,31 @@ header h1 {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
+    font-size: 1.1em;
     transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .cta-button:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.icon {
+    font-size: 1.5em;
 }
 
 .organigramme-section {
     padding: 40px;
+}
+
+.organigramme-section h2 {
+    color: #1e3c72;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
 }
 
 .org-chart {
@@ -88,31 +124,106 @@ header h1 {
 }
 
 .org-box {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border: 2px solid #667eea;
     border-radius: 12px;
     padding: 20px;
     min-width: 280px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.org-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
 }
 
 .org-box.chef {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
+    border: none;
+    min-width: 350px;
 }
 
 .org-box.unite {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    border: none;
+}
+
+.org-box h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+.org-box.chef h4, .org-box.unite h4 {
+    color: white;
 }
 
 .org-box .name {
     font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
     color: #1e3c72;
 }
 
 .org-box.chef .name, .org-box.unite .name {
     color: #ffd700;
+}
+
+.org-box .grade {
+    font-style: italic;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.org-box .contact {
+    font-size: 0.9em;
+    margin-top: 8px;
+    opacity: 0.85;
+}
+
+.org-box .contact a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.org-box .contact a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.org-box .mission {
+    font-size: 0.95em;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.org-box:not(.chef):not(.unite) .name {
+    color: #667eea;
+}
+
+.org-box:not(.chef):not(.unite) .mission {
+    border-top: 1px solid #e0e0e0;
+    color: #555;
+}
+
+.sub-team {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+.sub-team .member {
+    margin-top: 12px;
+    padding: 10px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
 }
 
 footer {
@@ -123,5 +234,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .org-box { min-width: 100%; }
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .actions-section {
+        padding: 20px;
+    }
+    
+    .org-box {
+        min-width: 100%;
+    }
 }
