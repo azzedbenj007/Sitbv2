@@ -40,11 +40,73 @@
         }
         
         .actions-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
             padding: 40px;
             background: #f8f9fa;
+        }
+        
+        .featured-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .featured-card h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .featured-card p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .exemples-questions {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .exemples-questions h4 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        
+        .exemples-questions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .exemples-questions li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+        
+        .exemples-questions li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+        
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
         
         .action-card {
@@ -71,7 +133,7 @@
         
         .action-card p {
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-size: 1.05em;
         }
         
@@ -86,11 +148,30 @@
             font-size: 1.1em;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            margin: 5px;
         }
         
         .cta-button:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .cta-button-primary {
+            background: white;
+            color: #667eea;
+            font-size: 1.3em;
+            padding: 18px 40px;
+        }
+        
+        .cta-button-primary:hover {
+            background: #f0f0f0;
+        }
+        
+        .task-button {
+            background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+            padding: 10px 20px;
+            font-size: 0.95em;
+            margin-top: 10px;
         }
         
         .icon {
@@ -240,6 +321,10 @@
             
             .actions-section {
                 padding: 20px;
+            }
+            
+            .featured-card {
+                padding: 25px;
             }
             
             .org-box {
